@@ -3,207 +3,780 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NZ Project — Il Futuro del Mobile</title>
-<meta name="description" content="NZ Project - Un nuovo paradigma per le telecomunicazioni mobili. Brevettato, Made in Italy.">
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<title>NZ Project — Il Futuro delle Telecomunicazioni Mobili</title>
+<meta name="description" content="NZ Project - Un nuovo paradigma per le telecomunicazioni mobili. 220+ claims brevettati. Made in Italy.">
+<meta property="og:title" content="NZ Project — Il Futuro del Mobile">
+<meta property="og:description" content="Il telefono del futuro non ha bisogno di essere potente. Deve essere intelligentemente vuoto.">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--bg:#06060c;--card:#0c0c18;--border:rgba(139,92,246,.15);--purple:#8b5cf6;--purple-light:#a78bfa;--indigo:#6366f1;--text:#e2e8f0;--dim:#7c83a8;--muted:#4a5072;--green:#10b981;--pink:#ec4899;--orange:#f59e0b}
-*{margin:0;padding:0;box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{font-family:'Inter',-apple-system,sans-serif;background:var(--bg);color:var(--text);line-height:1.6;overflow-x:hidden}
-.glow{position:fixed;top:-300px;left:50%;transform:translateX(-50%);width:800px;height:600px;background:radial-gradient(ellipse,rgba(99,102,241,.12) 0%,transparent 70%);pointer-events:none;z-index:0}
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(6,6,12,.85);backdrop-filter:blur(20px);border-bottom:1px solid var(--border)}
-nav .c{display:flex;align-items:center;justify-content:space-between;height:64px}
-.logo{display:flex;align-items:center;gap:10px;text-decoration:none}
-.logo .m{width:36px;height:36px;background:linear-gradient(135deg,var(--indigo),var(--purple));border-radius:10px;display:flex;align-items:center;justify-content:center;font-weight:900;font-size:16px;color:#fff}
-.logo span{font-weight:700;font-size:18px;color:var(--text)}
-.nav-l{display:flex;gap:32px;list-style:none}
-.nav-l a{color:var(--dim);text-decoration:none;font-size:14px;font-weight:500;transition:color .2s}
-.nav-l a:hover{color:var(--purple-light)}
-.nav-cta{background:linear-gradient(135deg,var(--indigo),var(--purple));color:#fff!important;padding:8px 20px;border-radius:8px;font-weight:600!important}
-.mbtn{display:none;background:none;border:none;color:var(--text);font-size:28px;cursor:pointer}
-.c{max-width:1200px;margin:0 auto;padding:0 24px;position:relative;z-index:1}
-.hero{min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:120px 24px 80px;position:relative}
-.orb{position:absolute;border-radius:50%;filter:blur(80px);opacity:.15;animation:fl 8s ease-in-out infinite}
-.o1{width:400px;height:400px;background:var(--indigo);top:20%;left:10%}
-.o2{width:300px;height:300px;background:var(--purple);bottom:20%;right:10%;animation-delay:-4s}
-@keyframes fl{0%,100%{transform:translateY(0)}50%{transform:translateY(-30px)}}
-.badge{display:inline-flex;align-items:center;gap:8px;background:rgba(99,102,241,.08);border:1px solid rgba(99,102,241,.2);border-radius:100px;padding:8px 20px;margin-bottom:32px;font-size:13px;font-weight:600;color:var(--purple-light);letter-spacing:1.5px;text-transform:uppercase}
-.pulse{width:8px;height:8px;background:var(--green);border-radius:50%;animation:pu 2s ease-in-out infinite}
-@keyframes pu{0%,100%{opacity:.5;transform:scale(.8)}50%{opacity:1;transform:scale(1.3)}}
-h1{font-size:clamp(40px,7vw,80px);font-weight:900;line-height:1.05;margin-bottom:24px;letter-spacing:-2px}
-.gr{background:linear-gradient(135deg,#e0e7ff,var(--purple-light),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.th{font-weight:300;color:var(--dim);-webkit-text-fill-color:var(--dim)}
-.sub{font-size:clamp(16px,2.5vw,20px);color:var(--dim);max-width:600px;margin:0 auto 48px;line-height:1.7}
-.stats{display:flex;justify-content:center;gap:48px;flex-wrap:wrap}
-.st{text-align:center}
-.sn{font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--purple-light),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sl{font-size:12px;color:var(--muted);text-transform:uppercase;letter-spacing:1.5px;font-weight:600;margin-top:4px}
-section{padding:100px 0}
-.lbl{font-size:12px;font-weight:700;color:var(--purple);letter-spacing:3px;text-transform:uppercase;margin-bottom:16px}
-.stl{font-size:clamp(28px,4vw,44px);font-weight:800;margin-bottom:16px;letter-spacing:-1px}
-.sd{font-size:17px;color:var(--dim);max-width:560px;line-height:1.7}
-#vision .c{display:grid;grid-template-columns:1fr 1fr;gap:80px;align-items:center}
-.vv{position:relative;height:400px;display:flex;align-items:center;justify-content:center}
-.vc{width:300px;height:300px;border-radius:50%;border:1px solid var(--border);display:flex;align-items:center;justify-content:center;position:relative;animation:sp 30s linear infinite}
-@keyframes sp{to{transform:rotate(360deg)}}
-.vc::before{content:'';position:absolute;width:16px;height:16px;background:var(--purple);border-radius:50%;top:-8px;box-shadow:0 0 20px var(--purple)}
-.vn{animation:sp 30s linear infinite reverse;font-size:48px;font-weight:900;background:linear-gradient(135deg,var(--purple-light),var(--indigo));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-#projects{background:linear-gradient(180deg,var(--bg) 0%,#080812 50%,var(--bg) 100%)}
-.pg{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;margin-top:48px}
-.pc{background:var(--card);border:1px solid var(--border);border-radius:20px;padding:40px 32px;transition:all .4s;position:relative;overflow:hidden}
-.pc::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:var(--ca);transform:scaleX(0);transition:transform .4s;transform-origin:left}
-.pc:hover::before{transform:scaleX(1)}
-.pc:hover{border-color:rgba(139,92,246,.3);transform:translateY(-4px);box-shadow:0 20px 60px rgba(0,0,0,.3)}
-.pi{width:56px;height:56px;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:20px}
-.pt{display:inline-block;font-size:10px;font-weight:700;letter-spacing:2px;text-transform:uppercase;padding:4px 12px;border-radius:6px;margin-bottom:16px}
-.pc h3{font-size:24px;font-weight:700;margin-bottom:12px}
-.pc p{color:var(--dim);font-size:15px;line-height:1.7;margin-bottom:20px}
-.pf{display:flex;flex-wrap:wrap;gap:8px}
-.pf span{font-size:12px;padding:4px 12px;border-radius:6px;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.06);color:var(--dim);font-weight:500}
-.cp{--ca:var(--indigo)}.cp .pi{background:rgba(99,102,241,.12);color:var(--indigo)}.cp .pt{background:rgba(99,102,241,.1);color:var(--indigo)}
-.cr{--ca:var(--green)}.cr .pi{background:rgba(16,185,129,.12);color:var(--green)}.cr .pt{background:rgba(16,185,129,.1);color:var(--green)}
-.cs{--ca:var(--pink)}.cs .pi{background:rgba(236,72,153,.12);color:var(--pink)}.cs .pt{background:rgba(236,72,153,.1);color:var(--pink)}
-.cz{--ca:var(--orange)}.cz .pi{background:rgba(245,158,11,.12);color:var(--orange)}.cz .pt{background:rgba(245,158,11,.1);color:var(--orange)}
-.cp{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-.phv{display:flex;justify-content:center}
-.phm{width:180px;height:360px;background:linear-gradient(165deg,#1a1a2e,#16162a);border-radius:30px;border:2px solid rgba(99,102,241,.3);position:relative;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 60px rgba(99,102,241,.15)}
-.phm::before{content:'';position:absolute;top:12px;width:60px;height:6px;background:rgba(99,102,241,.3);border-radius:3px}
-.phi{text-align:center}
-.phi .ci{font-size:48px;margin-bottom:8px}
-.phi .cl{font-size:11px;color:var(--muted);font-weight:500}
-#ip{border-top:1px solid var(--border);border-bottom:1px solid var(--border)}
-#ip .c{text-align:center}
-.ig{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:48px}
-.ic{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:32px 24px;text-align:center}
-.ic .ii{width:48px;height:48px;background:rgba(139,92,246,.1);border-radius:12px;display:flex;align-items:center;justify-content:center;margin:0 auto 16px;font-size:22px}
-.ic h4{font-size:16px;margin-bottom:8px;font-weight:700}
-.ic p{font-size:14px;color:var(--dim);line-height:1.6}
-.nda{background:linear-gradient(135deg,rgba(99,102,241,.08),rgba(139,92,246,.08));border:1px solid rgba(99,102,241,.2);border-radius:20px;padding:48px;text-align:center;margin-top:48px}
-.nda h3{font-size:22px;margin-bottom:12px}
-.nda p{color:var(--dim);font-size:15px;margin-bottom:24px;max-width:500px;margin-left:auto;margin-right:auto}
-.btn{display:inline-flex;align-items:center;gap:8px;background:linear-gradient(135deg,var(--indigo),var(--purple));color:#fff;padding:14px 32px;border-radius:12px;font-size:15px;font-weight:600;text-decoration:none;transition:all .3s}
-.btn:hover{transform:translateY(-2px);box-shadow:0 8px 30px rgba(99,102,241,.4)}
-.cg{display:flex;justify-content:center;gap:32px;margin-top:40px;flex-wrap:wrap}
-.cc{background:var(--card);border:1px solid var(--border);border-radius:16px;padding:28px 36px;text-decoration:none;color:var(--text);transition:all .3s;min-width:220px}
-.cc:hover{border-color:rgba(99,102,241,.3);transform:translateY(-2px)}
-.cc .lb{font-size:11px;color:var(--muted);text-transform:uppercase;letter-spacing:1px;font-weight:600;margin-bottom:6px}
-.cc .vl{font-size:16px;font-weight:600;color:var(--purple-light)}
-footer{border-top:1px solid var(--border);padding:32px 0;text-align:center}
-footer p{font-size:13px;color:var(--muted)}
-footer .lg{font-size:11px;margin-top:8px;opacity:.6}
-@media(max-width:900px){.nav-l{display:none}.mbtn{display:block}#vision .c{grid-template-columns:1fr;gap:40px}.vv{height:250px}.vc{width:200px;height:200px}.pg{grid-template-columns:1fr}.cp{grid-template-columns:1fr}.cp .phv{order:-1}.ig{grid-template-columns:1fr}.stats{gap:32px}.cg{flex-direction:column;align-items:center}}
-@media(max-width:600px){.hero{padding:100px 16px 60px}.sn{font-size:28px}.nda{padding:32px 20px}}
+:root {
+  --bg: #07070e;
+  --bg2: #0b0b16;
+  --card: #0e0e1a;
+  --border: rgba(120, 87, 220, .12);
+  --border-h: rgba(120, 87, 220, .25);
+  --accent: #7857dc;
+  --accent2: #a78bfa;
+  --accent3: #6246b3;
+  --gold: #d4a853;
+  --text: #d8dce6;
+  --dim: #8890ab;
+  --muted: #525978;
+  --green: #34d399;
+  --rose: #f472b6;
+  --sky: #38bdf8;
+  --amber: #fbbf24;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+
+::selection { background: rgba(120, 87, 220, .3); color: #fff; }
+
+/* === UTILITIES === */
+.c { max-width: 1100px; margin: 0 auto; padding: 0 28px; position: relative; z-index: 1; }
+.serif { font-family: 'Playfair Display', Georgia, serif; }
+
+/* === NOISE OVERLAY === */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='0.03'/%3E%3C/svg%3E");
+  pointer-events: none;
+  z-index: 0;
+  opacity: .4;
+}
+
+/* === NAV === */
+nav {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+  background: rgba(7, 7, 14, .88);
+  backdrop-filter: blur(24px);
+  border-bottom: 1px solid var(--border);
+}
+nav .c {
+  display: flex; align-items: center; justify-content: space-between; height: 60px;
+}
+.logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.logo .mark {
+  width: 34px; height: 34px;
+  background: linear-gradient(145deg, var(--accent), var(--accent3));
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 900; font-size: 14px; color: #fff;
+  letter-spacing: -0.5px;
+}
+.logo .wordmark { font-weight: 700; font-size: 16px; color: var(--text); letter-spacing: .5px; }
+.nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
+.nav-links a {
+  color: var(--dim); text-decoration: none; font-size: 13px;
+  font-weight: 500; transition: color .25s; letter-spacing: .3px;
+}
+.nav-links a:hover { color: var(--accent2); }
+.nav-cta {
+  background: var(--accent); color: #fff !important;
+  padding: 7px 18px; border-radius: 8px; font-weight: 600 !important;
+  transition: all .3s;
+}
+.nav-cta:hover { background: var(--accent3); transform: translateY(-1px); }
+.mobile-toggle {
+  display: none; background: none; border: none;
+  color: var(--text); font-size: 24px; cursor: pointer;
+}
+
+/* === HERO === */
+.hero {
+  min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  text-align: center;
+  padding: 160px 28px 100px;
+  position: relative;
+}
+.hero-glow {
+  position: absolute; top: -200px; left: 50%; transform: translateX(-50%);
+  width: 700px; height: 500px;
+  background: radial-gradient(ellipse, rgba(120, 87, 220, .1) 0%, transparent 65%);
+  pointer-events: none;
+}
+.hero-badge {
+  display: inline-flex; align-items: center; gap: 8px;
+  border: 1px solid rgba(120, 87, 220, .2);
+  border-radius: 100px; padding: 6px 18px;
+  font-size: 11px; font-weight: 600;
+  color: var(--accent2); letter-spacing: 2px; text-transform: uppercase;
+  margin-bottom: 36px;
+  background: rgba(120, 87, 220, .05);
+}
+.hero-badge .dot {
+  width: 7px; height: 7px; background: var(--green);
+  border-radius: 50%;
+  animation: pulse 2s ease-in-out infinite;
+}
+@keyframes pulse { 0%,100% { opacity: .5; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.2); } }
+.hero h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(38px, 6vw, 72px);
+  font-weight: 900; line-height: 1.08;
+  margin-bottom: 28px; letter-spacing: -1.5px;
+}
+.hero h1 em {
+  font-style: italic; font-weight: 400;
+  color: var(--accent2);
+}
+.hero h1 .thin {
+  display: block; font-weight: 400;
+  font-family: 'DM Sans', sans-serif;
+  font-size: clamp(18px, 2.5vw, 26px);
+  color: var(--dim); letter-spacing: 0;
+  margin-top: 16px; line-height: 1.6;
+}
+.hero-stats {
+  display: flex; justify-content: center; gap: 40px;
+  margin-top: 52px; flex-wrap: wrap;
+}
+.hero-stat { text-align: center; }
+.hero-stat .n {
+  font-family: 'Playfair Display', serif;
+  font-size: 32px; font-weight: 700;
+  color: var(--accent2);
+}
+.hero-stat .l {
+  font-size: 10px; color: var(--muted);
+  text-transform: uppercase; letter-spacing: 2px;
+  font-weight: 600; margin-top: 4px;
+}
+.scroll-hint {
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  color: var(--muted); font-size: 11px; letter-spacing: 2px; text-transform: uppercase;
+  animation: bob 2s ease-in-out infinite;
+}
+@keyframes bob { 0%,100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(6px); } }
+
+/* === SECTIONS === */
+section { padding: 100px 0; }
+.section-label {
+  font-size: 11px; font-weight: 700; color: var(--accent);
+  letter-spacing: 3px; text-transform: uppercase; margin-bottom: 20px;
+}
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(28px, 4vw, 44px);
+  font-weight: 700; margin-bottom: 20px; letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+.section-desc {
+  font-size: 16px; color: var(--dim); max-width: 580px; line-height: 1.8;
+}
+
+/* === PROBLEMA === */
+#problema { border-bottom: 1px solid var(--border); }
+#problema .grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: start;
+}
+#problema .right {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 36px;
+  position: relative; overflow: hidden;
+}
+#problema .right::before {
+  content: '';
+  position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, var(--accent), transparent);
+}
+.timeline-item {
+  padding: 16px 0;
+  border-bottom: 1px solid rgba(255,255,255,.04);
+}
+.timeline-item:last-child { border-bottom: none; }
+.timeline-item .year {
+  font-size: 11px; font-weight: 700; color: var(--accent2);
+  letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 4px;
+}
+.timeline-item p { font-size: 14px; color: var(--dim); line-height: 1.6; }
+
+/* === SOLUZIONE === */
+#soluzione {
+  background: linear-gradient(180deg, var(--bg) 0%, var(--bg2) 50%, var(--bg) 100%);
+}
+.solution-cards {
+  display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px;
+  margin-top: 48px;
+}
+.sol-card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px 24px;
+  transition: all .4s;
+}
+.sol-card:hover {
+  border-color: var(--border-h);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.3);
+}
+.sol-card .icon {
+  width: 44px; height: 44px; border-radius: 11px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 20px; margin-bottom: 18px;
+  background: rgba(120, 87, 220, .08);
+}
+.sol-card h4 { font-size: 17px; font-weight: 700; margin-bottom: 10px; }
+.sol-card p { font-size: 14px; color: var(--dim); line-height: 1.7; }
+
+/* === COSA ABBIAMO === */
+#arsenal { border-top: 1px solid var(--border); }
+.arsenal-grid {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px;
+  margin-top: 48px;
+}
+.ars-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 28px 24px;
+  display: flex; gap: 18px; align-items: flex-start;
+  transition: all .3s;
+}
+.ars-card:hover { border-color: var(--border-h); }
+.ars-icon {
+  width: 42px; height: 42px; min-width: 42px;
+  border-radius: 10px; display: flex; align-items: center;
+  justify-content: center; font-size: 18px;
+  background: rgba(120, 87, 220, .08);
+}
+.ars-card h4 { font-size: 15px; font-weight: 700; margin-bottom: 6px; }
+.ars-card p { font-size: 13px; color: var(--dim); line-height: 1.6; }
+.ars-badge {
+  display: inline-block; font-size: 10px; font-weight: 700;
+  color: var(--green); letter-spacing: 1px; text-transform: uppercase;
+  background: rgba(52, 211, 153, .08);
+  padding: 3px 10px; border-radius: 4px; margin-top: 8px;
+}
+
+/* === DOWNLOAD === */
+.download-banner {
+  background: linear-gradient(135deg, rgba(120, 87, 220, .06), rgba(212, 168, 83, .06));
+  border: 1px solid rgba(120, 87, 220, .15);
+  border-radius: 20px; padding: 44px; margin-top: 40px;
+  display: flex; align-items: center; justify-content: space-between;
+  gap: 32px; flex-wrap: wrap;
+}
+.download-banner .left h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 22px; margin-bottom: 8px;
+}
+.download-banner .left p { font-size: 14px; color: var(--dim); max-width: 420px; }
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 13px 28px; border-radius: 10px;
+  font-size: 14px; font-weight: 600;
+  text-decoration: none; transition: all .3s; cursor: pointer;
+}
+.btn-primary {
+  background: var(--accent); color: #fff;
+}
+.btn-primary:hover { background: var(--accent3); transform: translateY(-2px); box-shadow: 0 8px 28px rgba(120,87,220,.35); }
+.btn-outline {
+  background: transparent; color: var(--accent2);
+  border: 1px solid rgba(120, 87, 220, .25);
+}
+.btn-outline:hover { border-color: var(--accent); background: rgba(120,87,220,.06); }
+
+/* === COSA CERCHIAMO === */
+#cerchiamo {
+  background: var(--bg2);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+.need-grid {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 24px;
+  margin-top: 48px;
+}
+.need-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 36px 28px;
+  position: relative; overflow: hidden;
+  transition: all .4s;
+}
+.need-card:hover {
+  border-color: var(--border-h);
+  transform: translateY(-3px);
+  box-shadow: 0 16px 48px rgba(0,0,0,.3);
+}
+.need-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0;
+  height: 2px; transform: scaleX(0); transition: transform .4s;
+  transform-origin: left;
+}
+.need-card:hover::before { transform: scaleX(1); }
+.need-card.team::before { background: var(--sky); }
+.need-card.invest::before { background: var(--gold); }
+.need-num {
+  font-family: 'Playfair Display', serif;
+  font-size: 48px; font-weight: 700;
+  color: rgba(120, 87, 220, .12);
+  position: absolute; top: 16px; right: 24px;
+}
+.need-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 12px; }
+.need-card p { font-size: 14px; color: var(--dim); line-height: 1.7; margin-bottom: 16px; }
+.need-tags { display: flex; flex-wrap: wrap; gap: 8px; }
+.need-tag {
+  font-size: 11px; padding: 5px 12px; border-radius: 6px;
+  background: rgba(255,255,255,.04); border: 1px solid rgba(255,255,255,.06);
+  color: var(--dim); font-weight: 500;
+}
+
+/* === ALTRI PROGETTI === */
+#progetti { }
+.projects-grid {
+  display: grid; grid-template-columns: repeat(3, 1fr);
+  gap: 20px; margin-top: 48px;
+}
+.proj-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 16px; padding: 32px 24px;
+  position: relative; overflow: hidden;
+  transition: all .4s;
+}
+.proj-card:hover {
+  border-color: var(--border-h);
+  transform: translateY(-3px);
+}
+.proj-card::after {
+  content: 'COMING SOON';
+  position: absolute; top: 16px; right: 16px;
+  font-size: 9px; font-weight: 700; letter-spacing: 1.5px;
+  padding: 3px 10px; border-radius: 4px;
+  background: rgba(255,255,255,.05);
+  color: var(--muted);
+}
+.proj-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 22px; margin-bottom: 18px;
+}
+.proj-card h3 { font-size: 20px; font-weight: 700; margin-bottom: 8px; }
+.proj-card .tagline {
+  font-family: 'Playfair Display', serif;
+  font-style: italic; font-size: 14px;
+  color: var(--dim); margin-bottom: 14px;
+}
+.proj-card p { font-size: 13px; color: var(--muted); line-height: 1.6; }
+.proj-card.ride .proj-icon { background: rgba(52, 211, 153, .1); color: var(--green); }
+.proj-card.social .proj-icon { background: rgba(244, 114, 182, .1); color: var(--rose); }
+.proj-card.zaino .proj-icon { background: rgba(251, 191, 36, .1); color: var(--amber); }
+
+/* === NDA === */
+.nda-section {
+  background: linear-gradient(135deg, rgba(120, 87, 220, .06), rgba(120, 87, 220, .02));
+  border: 1px solid rgba(120, 87, 220, .15);
+  border-radius: 20px; padding: 52px; text-align: center; margin-top: 60px;
+}
+.nda-section h3 {
+  font-family: 'Playfair Display', serif;
+  font-size: 26px; margin-bottom: 12px;
+}
+.nda-section p {
+  color: var(--dim); font-size: 15px; margin-bottom: 28px;
+  max-width: 480px; margin-left: auto; margin-right: auto;
+}
+
+/* === CONTATTI === */
+#contatti { border-top: 1px solid var(--border); }
+.contact-grid {
+  display: flex; justify-content: center; gap: 24px;
+  margin-top: 40px; flex-wrap: wrap;
+}
+.contact-card {
+  background: var(--card); border: 1px solid var(--border);
+  border-radius: 14px; padding: 24px 32px;
+  text-decoration: none; color: var(--text);
+  transition: all .3s; min-width: 200px; text-align: center;
+}
+.contact-card:hover {
+  border-color: var(--border-h); transform: translateY(-2px);
+}
+.contact-card .label {
+  font-size: 10px; color: var(--muted); text-transform: uppercase;
+  letter-spacing: 1.5px; font-weight: 600; margin-bottom: 6px;
+}
+.contact-card .value {
+  font-size: 15px; font-weight: 600; color: var(--accent2);
+}
+
+/* === FOOTER === */
+footer {
+  border-top: 1px solid var(--border);
+  padding: 28px 0; text-align: center;
+}
+footer p { font-size: 12px; color: var(--muted); }
+footer .sub { font-size: 10px; margin-top: 6px; opacity: .6; }
+
+/* === MADE IN ITALY RIBBON === */
+.italy-ribbon {
+  display: flex; align-items: center; justify-content: center;
+  gap: 12px; padding: 20px 0; margin-top: 60px;
+  border-top: 1px solid var(--border);
+}
+.italy-flag {
+  display: flex; gap: 0; border-radius: 3px; overflow: hidden;
+}
+.italy-flag span { width: 6px; height: 18px; }
+.flag-g { background: #009246; }
+.flag-w { background: #fff; }
+.flag-r { background: #ce2b37; }
+.italy-ribbon p {
+  font-size: 12px; color: var(--muted); letter-spacing: 1px;
+  text-transform: uppercase; font-weight: 600;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .mobile-toggle { display: block; }
+  .nav-links.open {
+    display: flex; flex-direction: column;
+    position: absolute; top: 60px; left: 0; right: 0;
+    background: rgba(7, 7, 14, .96);
+    padding: 20px 28px; gap: 16px;
+    border-bottom: 1px solid var(--border);
+  }
+  #problema .grid { grid-template-columns: 1fr; gap: 40px; }
+  .solution-cards { grid-template-columns: 1fr; }
+  .arsenal-grid { grid-template-columns: 1fr; }
+  .need-grid { grid-template-columns: 1fr; }
+  .projects-grid { grid-template-columns: 1fr; }
+  .download-banner { flex-direction: column; text-align: center; }
+  .hero-stats { gap: 28px; }
+}
+@media (max-width: 600px) {
+  .hero { padding: 140px 20px 70px; }
+  .nda-section { padding: 32px 20px; }
+  section { padding: 72px 0; }
+}
 </style>
 </head>
 <body>
-<div class="glow"></div>
-<nav><div class="c">
-<a href="#" class="logo"><div class="m">NZ</div><span>NZ Project</span></a>
-<ul class="nav-l">
-<li><a href="#vision">Vision</a></li>
-<li><a href="#projects">Progetti</a></li>
-<li><a href="#ip">Brevetti</a></li>
-<li><a href="#contatti" class="nav-cta">Contattaci</a></li>
-</ul>
-<button class="mbtn" onclick="document.querySelector('.nav-l').style.display=this.dataset.o=this.dataset.o?'':'flex'">&#9776;</button>
+
+<!-- CONFIDENTIALITY BANNER -->
+<div id="confBanner" style="background:rgba(212,168,83,.08);border-bottom:1px solid rgba(212,168,83,.2);padding:10px 28px;text-align:center;position:fixed;top:0;left:0;right:0;z-index:200;backdrop-filter:blur(20px);background-color:rgba(7,7,14,.95);transition:opacity 1s ease,transform 1s ease;">
+  <p style="font-size:11px;color:var(--gold);letter-spacing:1px;font-weight:600;">&#9888; DOCUMENTO RISERVATO &mdash; Questo sito contiene informazioni confidenziali. Si prega di non condividere senza autorizzazione.</p>
+</div>
+<script>
+setTimeout(function(){
+  var b=document.getElementById('confBanner');
+  b.style.opacity='0';
+  b.style.transform='translateY(-100%)';
+  setTimeout(function(){
+    b.style.display='none';
+    document.querySelector('nav').style.top='0';
+  },1000);
+},5000);
+</script>
+
+<!-- NAV -->
+<nav style="top:36px;transition:top .8s ease;"><div class="c">
+  <a href="#" class="logo">
+    <div class="mark">NZ</div>
+    <span class="wordmark">NZ PROJECT</span>
+  </a>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#problema">Il Problema</a></li>
+    <li><a href="#soluzione">La Soluzione</a></li>
+    <li><a href="#arsenal">Cosa Abbiamo</a></li>
+    <li><a href="#cerchiamo">Cosa Cerchiamo</a></li>
+    <li><a href="#progetti">Altri Progetti</a></li>
+    <li><a href="#contatti" class="nav-cta">Contattaci</a></li>
+  </ul>
+  <button class="mobile-toggle" onclick="document.getElementById('navLinks').classList.toggle('open')">&#9776;</button>
 </div></nav>
 
+<!-- HERO -->
 <section class="hero">
-<div class="orb o1"></div><div class="orb o2"></div>
-<div class="c">
-<div class="badge"><span class="pulse"></span>Brevettato in Italia</div>
-<h1><span class="gr">Il futuro</span><br><span class="th">non ha bisogno di hardware.</span></h1>
-<p class="sub">NZ Project ridefinisce il rapporto tra persone e tecnologia. Meno dispositivo, piu intelligenza. Un ecosistema di prodotti pensati per un mondo che cambia.</p>
-<div class="stats">
-<div class="st"><div class="sn">220+</div><div class="sl">Claims Brevettati</div></div>
-<div class="st"><div class="sn">2</div><div class="sl">Portafogli IP</div></div>
-<div class="st"><div class="sn">4</div><div class="sl">Progetti Attivi</div></div>
-<div class="st"><div class="sn">5</div><div class="sl">Mercati Target</div></div>
-</div>
-</div>
+  <div class="hero-glow"></div>
+  <div class="c">
+    <div class="hero-badge"><span class="dot"></span> Brevettato in Italia &mdash; Estensione Internazionale in Corso</div>
+    <h1>
+      Il futuro <em>non ha bisogno</em><br>di hardware.
+      <span class="thin">NZ Project ridefinisce le telecomunicazioni mobili.<br>Meno dispositivo, piu intelligenza. Un ecosistema nato in Italia.</span>
+    </h1>
+    <div class="hero-stats">
+      <div class="hero-stat"><div class="n">220+</div><div class="l">Claims Brevettati</div></div>
+      <div class="hero-stat"><div class="n">2</div><div class="l">Portafogli IP</div></div>
+      <div class="hero-stat"><div class="n">4</div><div class="l">Progetti</div></div>
+      <div class="hero-stat"><div class="n">5</div><div class="l">Mercati Target</div></div>
+    </div>
+  </div>
+  <div class="scroll-hint">&#8595; Scopri di piu</div>
 </section>
 
-<section id="vision"><div class="c">
-<div>
-<div class="lbl">La Visione</div>
-<div class="stl">Meno dentro il telefono.<br>Piu nel mondo.</div>
-<p class="sd" style="margin-bottom:24px">I processori piu potenti vengono ormai destinati ai data center per l'intelligenza artificiale. I telefoni di domani non potranno piu essere mini-computer tascabili.</p>
-<p class="sd">NZ trasforma questo limite in opportunita: un telefono leggero, economico e a basse emissioni che attinge a potenza illimitata dal cloud.</p>
-</div>
-<div class="vv"><div class="vc"><div class="vn">NZ</div></div></div>
+<!-- IL PROBLEMA -->
+<section id="problema"><div class="c">
+  <div class="grid">
+    <div>
+      <div class="section-label">Il Problema</div>
+      <div class="section-title">C'e una crisi silenziosa<br>nel mondo della tecnologia.</div>
+      <p class="section-desc" style="margin-bottom:24px">I produttori di chip stanno riallocando la capacita produttiva verso i data center per l'intelligenza artificiale. Miliardi di persone continuano ad aspettarsi smartphone sempre piu potenti a prezzi accessibili.</p>
+      <p class="section-desc">Queste due forze sono in rotta di collisione. Il modello attuale &mdash; ogni utente deve possedere un supercomputer tascabile da mille euro &mdash; sta diventando insostenibile.</p>
+      <p class="section-desc" style="margin-top:24px; color: var(--accent2); font-weight:500; font-style:italic; font-family: 'Playfair Display', serif; font-size: 18px;">E se il problema non fosse rendere i telefoni piu potenti, ma rendere la potenza irrilevante nel telefono stesso?</p>
+    </div>
+    <div class="right">
+      <div class="timeline-item">
+        <div class="year">La Convergenza</div>
+        <p>TSMC, Samsung e Intel spostano progressivamente la produzione dai chip consumer ai chip per AI e data center.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">La Conseguenza</div>
+        <p>I telefoni costeranno di piu. Le innovazioni hardware rallenteranno. I prezzi saliranno.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">L'Opportunita</div>
+        <p>Chi riesce a separare la potenza di calcolo dal dispositivo fisico ha in mano il futuro delle telecomunicazioni.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="year">La Risposta</div>
+        <p>NZ Project non migliora il sistema. Lo bypassa completamente.</p>
+      </div>
+    </div>
+  </div>
 </div></section>
 
-<section id="projects"><div class="c">
-<div style="text-align:center;margin-bottom:20px">
-<div class="lbl">Ecosistema</div>
-<div class="stl">Un progetto. Quattro rivoluzioni.</div>
-<p class="sd" style="margin:0 auto">Ogni prodotto NZ condivide la stessa filosofia: togliere complessita, aggiungere valore.</p>
-</div>
-<div class="pg">
-<div class="pc cp"><div>
-<div class="pi">&#128241;</div>
-<div class="pt">Prodotto Principale</div>
-<h3>NZPhone</h3>
-<p>Il telefono che non ha bisogno di essere potente. Hardware minimale, design essenziale, tutta la potenza nel cloud. Costa come un economico, performa come un top di gamma. Meno componenti significa meno emissioni elettromagnetiche.</p>
-<div class="pf"><span>Cloud-Native</span><span>Basse Emissioni</span><span>Prezzo Accessibile</span><span>Performance Premium</span><span>Made in Italy</span></div>
-</div><div class="phv"><div class="phm"><div class="phi"><div class="ci">&#9729;</div><div class="cl">Potenza nel cloud</div></div></div></div></div>
+<!-- LA SOLUZIONE -->
+<section id="soluzione"><div class="c">
+  <div style="text-align:center; margin-bottom:20px;">
+    <div class="section-label">La Soluzione</div>
+    <div class="section-title">Un telefono <em class="serif" style="color:var(--accent2)">intelligentemente vuoto.</em></div>
+    <p class="section-desc" style="margin:0 auto">Un dispositivo leggero, economico, con hardware minimo che delega l'elaborazione a un'infrastruttura distribuita. Non un thin client. Qualcosa di completamente nuovo.</p>
+  </div>
+  <div class="solution-cards">
+    <div class="sol-card" style="position:relative;overflow:hidden;">
+      <div class="icon">&#9729;</div>
+      <h4 style="filter:blur(5px);user-select:none;">Cloud-Native</h4>
+      <p style="filter:blur(5px);user-select:none;">Tutta la potenza di calcolo vive nel cloud. Il telefono e un terminale intelligente che orchestra risorse distribuite su piu livelli.</p>
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(14,14,26,.6);display:flex;align-items:center;justify-content:center;border-radius:16px;">
+        <span style="font-size:20px;color:var(--muted);">&#128274;</span>
+      </div>
+    </div>
+    <div class="sol-card" style="position:relative;overflow:hidden;">
+      <div class="icon">&#129504;</div>
+      <h4 style="filter:blur(5px);user-select:none;">Tecnologia Proprietaria</h4>
+      <p style="filter:blur(5px);user-select:none;">Un sistema proprietario brevettato che rappresenta il cuore dell'innovazione NZ. Dettagli disponibili solo previo accordo di riservatezza.</p>
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(14,14,26,.6);display:flex;align-items:center;justify-content:center;border-radius:16px;">
+        <span style="font-size:20px;color:var(--muted);">&#128274;</span>
+      </div>
+    </div>
+    <div class="sol-card" style="position:relative;overflow:hidden;">
+      <div class="icon">&#128171;</div>
+      <h4 style="filter:blur(5px);user-select:none;">Basse Emissioni</h4>
+      <p style="filter:blur(5px);user-select:none;">Meno componenti interni significa meno processing locale, meno calore, meno emissioni elettromagnetiche per chi lo usa ogni giorno.</p>
+      <div style="position:absolute;top:0;left:0;right:0;bottom:0;background:rgba(14,14,26,.6);display:flex;align-items:center;justify-content:center;border-radius:16px;">
+        <span style="font-size:20px;color:var(--muted);">&#128274;</span>
+      </div>
+    </div>
+  </div>
 
-<div class="pc cr">
-<div class="pi">&#128663;</div>
-<div class="pt">Mobilita</div>
-<h3>NZRide</h3>
-<p>Un nuovo modo di muoversi in citta. NZRide ripensa la mobilita condivisa con un approccio diverso dai competitor tradizionali — piu accessibile, piu connesso, piu rispettoso.</p>
-<div class="pf"><span>Mobilita Smart</span><span>Alternativa ai Big Player</span><span>Integrato con NZ</span></div>
-</div>
+  <!-- RED CTA -->
+  <div style="margin-top:36px;text-align:center;background:rgba(220,50,50,.06);border:1px solid rgba(220,50,50,.2);border-radius:16px;padding:32px 24px;">
+    <p style="font-size:13px;color:#e85454;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:8px;">&#128274; Contenuto Riservato</p>
+    <p style="font-size:16px;color:var(--dim);margin-bottom:20px;">I dettagli sulla tecnologia NZ sono protetti da brevetto.<br>Per scoprire la soluzione completa:</p>
+    <span style="display:inline-flex;align-items:center;gap:8px;background:#e85454;color:#fff;padding:14px 32px;border-radius:10px;font-size:15px;font-weight:700;letter-spacing:.5px;">&#128231; alessandro@luxlab.it</span>
+  </div>
 
-<div class="pc cs">
-<div class="pi">&#10084;</div>
-<div class="pt">Social</div>
-<h3>Swingle</h3>
-<p>Le connessioni tra persone meritano un approccio nuovo. Swingle reinventa il modo in cui le persone si incontrano, con un'esperienza autentica e senza dinamiche tossiche.</p>
-<div class="pf"><span>Connessioni Autentiche</span><span>Privacy First</span><span>Integrato con NZ</span></div>
-</div>
-
-<div class="pc cz">
-<div class="pi">&#127890;</div>
-<div class="pt">Education</div>
-<h3>NZZaino</h3>
-<p>Lo zaino intelligente per studenti di ogni tipo — dalle elementari all'universita. Un compagno di studio performante che integra tecnologia e praticita quotidiana.</p>
-<div class="pf"><span>Per Tutti gli Studenti</span><span>Smart e Performante</span><span>Design Funzionale</span></div>
-</div>
-</div></div></section>
-
-<section id="ip"><div class="c">
-<div class="lbl" style="text-align:center">Proprieta Intellettuale</div>
-<div class="stl" style="text-align:center">Protetto. Blindato. Pronto.</div>
-<p class="sd" style="text-align:center;margin:0 auto">NZ Project e costruito su una base di proprieta intellettuale solida e difendibile.</p>
-<div class="ig">
-<div class="ic"><div class="ii">&#128220;</div><h4>Due Brevetti Depositati</h4><p>Portafoglio completo e ibrido, depositati in Italia con oltre 220 rivendicazioni totali.</p></div>
-<div class="ic"><div class="ii">&#127758;</div><h4>Estensione Internazionale</h4><p>In preparazione per Europa, USA, Cina e Russia.</p></div>
-<div class="ic"><div class="ii">&#128269;</div><h4>Ricerca Anteriorita</h4><p>Analisi su 5 giurisdizioni. Rischio basso. Combinazione unica al mondo.</p></div>
-</div>
-<div class="nda">
-<h3>Vuoi saperne di piu?</h3>
-<p>Dettagli tecnici, piano industriale e proiezioni finanziarie disponibili previo accordo di riservatezza.</p>
-<a href="mailto:alessandro@luxlab.it?subject=Richiesta%20NDA%20-%20NZ%20Project&body=Buongiorno%2C%0Asono%20interessato%2Fa%20a%20ricevere%20informazioni%20sul%20progetto%20NZ.%0A%0ANome%3A%0AAzienda%3A%0A%0AGrazie" class="btn">&#128274; Richiedi Accesso NDA</a>
-</div>
+  <div style="margin-top:36px; text-align:center;">
+    <p style="margin-top:20px; font-family:'Playfair Display',serif; font-size:18px; color:var(--accent2); font-style:italic;">
+      Dove oggi il valore e nel telefono che compri,<br>domani il valore e nella rete a cui ti connetti. NZ e quella rete.
+    </p>
+  </div>
 </div></section>
 
+<!-- COSA ABBIAMO -->
+<section id="arsenal"><div class="c">
+  <div style="text-align:center;">
+    <div class="section-label">Cosa Abbiamo Oggi</div>
+    <div class="section-title">Non e un'idea. E un progetto<br><em class="serif" style="color:var(--accent2)">blindato e strutturato.</em></div>
+    <p class="section-desc" style="margin:0 auto">NZ Project dispone gia di un arsenale completo di proprieta intellettuale, documentazione e strategia.</p>
+  </div>
+  <div class="arsenal-grid">
+    <div class="ars-card">
+      <div class="ars-icon">&#128220;</div>
+      <div>
+        <h4>Due Portafogli Brevettuali</h4>
+        <p>Brevetto completo (157+ claims) e brevetto ibrido (63 claims), depositati in Italia. Coprono hardware proprietario, software, mesh networking e infrastruttura.</p>
+        <div class="ars-badge">&#10003; Depositati</div>
+      </div>
+    </div>
+    <div class="ars-card">
+      <div class="ars-icon">&#127758;</div>
+      <div>
+        <h4>Estensione Internazionale</h4>
+        <p>Preparazione in corso per 5 mercati: Europa (EPO), USA (USPTO), Cina (CNIPA), Russia (Rospatent). Finestra di priorita attiva.</p>
+        <div class="ars-badge">&#8987; In preparazione</div>
+      </div>
+    </div>
+    <div class="ars-card">
+      <div class="ars-icon">&#128269;</div>
+      <div>
+        <h4>Ricerca di Anteriorita</h4>
+        <p>Analisi completata su 5 giurisdizioni. Rischio complessivo basso. Combinazione tecnologica unica al mondo &mdash; nessun prior art identico trovato.</p>
+        <div class="ars-badge">&#10003; Completata</div>
+      </div>
+    </div>
+    <div class="ars-card">
+      <div class="ars-icon">&#128200;</div>
+      <div>
+        <h4>Piano Industriale & Pitch</h4>
+        <p>Piano industriale dettagliato con proiezioni finanziarie, analisi di mercato, costi di sviluppo, modello di business con subscription tiers, e materiali di presentazione per investitori.</p>
+        <div class="ars-badge">&#10003; Pronto</div>
+      </div>
+    </div>
+    <div class="ars-card">
+      <div class="ars-icon">&#128736;</div>
+      <div>
+        <h4>Strategia di Go-to-Market</h4>
+        <p>Un percorso strutturato in fasi per arrivare al mercato, con validazione progressiva e scalabilita integrata nel modello. Dettagli disponibili previo NDA.</p>
+        <div class="ars-badge">&#10003; Definita</div>
+      </div>
+    </div>
+    <div class="ars-card">
+      <div class="ars-icon">&#128107;</div>
+      <div>
+        <h4>Consulenza Strategica</h4>
+        <p>Il progetto e seguito dal <strong>Dott. Antonio Polito</strong>, consulente strategico per startup, in fase di strutturazione della proprieta intellettuale, validazione e posizionamento sul mercato.</p>
+        <div class="ars-badge">&#10003; In corso</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download Banner -->
+  <div class="download-banner">
+    <div class="left">
+      <h3>&#128196; Report di Visione e Concept</h3>
+      <p>Abbiamo preparato un documento introduttivo che racconta la visione di NZ Project. Per riceverlo, contattaci direttamente.</p>
+    </div>
+    <a href="mailto:alessandro@luxlab.it?subject=Richiesta%20Report%20%E2%80%94%20NZ%20Project&body=Buongiorno%2C%0A%0Adesidero%20ricevere%20il%20Report%20di%20Visione%20e%20Concept%20di%20NZ%20Project.%0A%0ANome%3A%0AAzienda%2FRuolo%3A%0A%0AGrazie" class="btn btn-primary">&#128231; Richiedi il Report via Email</a>
+  </div>
+</div></section>
+
+<!-- COSA CERCHIAMO -->
+<section id="cerchiamo"><div class="c">
+  <div style="text-align:center;">
+    <div class="section-label">Cosa Cerchiamo</div>
+    <div class="section-title">Per passare dalla visione<br><em class="serif" style="color:var(--accent2)">al primo prodotto.</em></div>
+    <p class="section-desc" style="margin:0 auto">La proprieta intellettuale e protetta. La strategia e definita. Quello che manca per la fase operativa.</p>
+  </div>
+  <div class="need-grid">
+    <div class="need-card team">
+      <div class="need-num">01</div>
+      <h3>&#128187; Team di Sviluppo</h3>
+      <p>Cerchiamo sviluppatori, ingegneri e tecnici che vogliano costruire il futuro delle telecomunicazioni mobili. Persone che vedano oltre l'ovvio e vogliano far parte di qualcosa di nuovo.</p>
+      <div class="need-tags">
+        <span class="need-tag">Mobile Development</span>
+        <span class="need-tag">Software Architecture</span>
+        <span class="need-tag">Backend Engineering</span>
+        <span class="need-tag">Network Engineering</span>
+      </div>
+    </div>
+    <div class="need-card invest">
+      <div class="need-num">02</div>
+      <h3>&#128176; Investitori & Partner</h3>
+      <p>Cerchiamo investitori visionari, business angels e partner strategici pronti a entrare in un progetto con IP protetta, mercato validabile e ambizione globale. Proposte di investimento strutturate e disponibili.</p>
+      <div class="need-tags">
+        <span class="need-tag">Business Angels</span>
+        <span class="need-tag">Venture Capital</span>
+        <span class="need-tag">Partner Strategici</span>
+        <span class="need-tag">Incubatori</span>
+      </div>
+    </div>
+  </div>
+</div></section>
+
+<!-- ALTRI PROGETTI -->
+<section id="progetti"><div class="c">
+  <div style="text-align:center;">
+    <div class="section-label">Ecosistema NZ</div>
+    <div class="section-title">Non solo un telefono.<br><em class="serif" style="color:var(--accent2)">Una piattaforma.</em></div>
+    <p class="section-desc" style="margin:0 auto">NZ Project non e un singolo prodotto. E un ecosistema di soluzioni che condividono la stessa filosofia: togliere complessita, aggiungere valore. <strong style="color:var(--accent2)">Ogni progetto e aperto a investitori e partner strategici.</strong></p>
+  </div>
+  <div class="projects-grid">
+    <div class="proj-card ride">
+      <div class="proj-icon">&#128663;</div>
+      <h3>NZRide</h3>
+      <div class="tagline">"Muoversi diversamente."</div>
+      <p>La risposta italiana a Uber. Un nuovo modello di mobilita condivisa piu equo, piu accessibile e piu connesso. Stesse esigenze, approccio completamente diverso.</p>
+      <p style="margin-top:10px;font-size:11px;color:var(--gold);font-weight:600;letter-spacing:1px;">&#128176; APERTO A INVESTITORI</p>
+    </div>
+    <div class="proj-card social">
+      <div class="proj-icon">&#10084;</div>
+      <h3>Swingle</h3>
+      <div class="tagline">"Connessioni autentiche."</div>
+      <p>L'anti-Tinder. Le persone meritano connessioni vere, non dinamiche tossiche e swipe infiniti. Swingle reinventa il dating con un'esperienza autentica, sicura e pensata per relazioni reali.</p>
+      <p style="margin-top:10px;font-size:11px;color:var(--gold);font-weight:600;letter-spacing:1px;">&#128176; APERTO A INVESTITORI</p>
+    </div>
+    <div class="proj-card zaino">
+      <div class="proj-icon">&#127890;</div>
+      <h3>NZZaino</h3>
+      <div class="tagline">"Lo studio diventa smart."</div>
+      <p>Il concetto di O bag applicato al mondo dello studio. Uno zaino modulare, intelligente e personalizzabile per studenti di ogni livello &mdash; dalle elementari all'universita. Design italiano, tecnologia integrata.</p>
+      <p style="margin-top:10px;font-size:11px;color:var(--gold);font-weight:600;letter-spacing:1px;">&#128176; APERTO A INVESTITORI</p>
+    </div>
+  </div>
+
+  <!-- NDA Section -->
+  <div class="nda-section">
+    <h3>&#128274; Vuoi i dettagli tecnici?</h3>
+    <p>Architettura di sistema, specifiche brevettuali, proiezioni finanziarie dettagliate e roadmap tecnica sono disponibili esclusivamente previo accordo di riservatezza.</p>
+    <a href="mailto:alessandro@luxlab.it?subject=Richiesta%20NDA%20%E2%80%94%20NZ%20Project&body=Buongiorno%2C%0A%0Asono%20interessato%2Fa%20a%20ricevere%20informazioni%20riservate%20sul%20progetto%20NZ.%0A%0ANome%3A%0AAzienda%2FRuolo%3A%0A%0AGrazie" class="btn btn-primary">&#128274; Richiedi Accesso NDA</a>
+  </div>
+</div></section>
+
+<!-- Made in Italy -->
+<section style="padding:0;"><div class="c">
+  <div class="italy-ribbon">
+    <div class="italy-flag"><span class="flag-g"></span><span class="flag-w"></span><span class="flag-r"></span></div>
+    <p>Concepito, brevettato e sviluppato in Italia</p>
+    <div class="italy-flag"><span class="flag-g"></span><span class="flag-w"></span><span class="flag-r"></span></div>
+  </div>
+</div></section>
+
+<!-- CONTATTI -->
 <section id="contatti"><div class="c">
-<div class="lbl" style="text-align:center">Contatti</div>
-<div class="stl" style="text-align:center">Parliamone.</div>
-<p class="sd" style="text-align:center;margin:0 auto">Investitori, partner, incubatori — se credete nell'innovazione, ci farebbe piacere conoscervi.</p>
-<div class="cg">
-<a href="mailto:alessandro@luxlab.it" class="cc"><div class="lb">Email</div><div class="vl">alessandro@luxlab.it</div></a>
-<a href="tel:+393773505030" class="cc"><div class="lb">Telefono</div><div class="vl">+39 377 350 5030</div></a>
-<div class="cc"><div class="lb">Sede</div><div class="vl">Empoli (FI), Italia</div></div>
-</div>
+  <div style="text-align:center;">
+    <div class="section-label">Contatti</div>
+    <div class="section-title">Parliamone.</div>
+    <p class="section-desc" style="margin:0 auto">Investitori, partner, incubatori, sviluppatori &mdash; se credete nell'innovazione, ci piacerebbe conoscervi.</p>
+  </div>
+  <div class="contact-grid">
+    <a href="mailto:alessandro@luxlab.it" class="contact-card">
+      <div class="label">Email</div>
+      <div class="value">alessandro@luxlab.it</div>
+    </a>
+    <a href="tel:+393425723427" class="contact-card">
+      <div class="label">Telefono</div>
+      <div class="value">+39 342 572 3427</div>
+    </a>
+    <div class="contact-card">
+      <div class="label">Sede</div>
+      <div class="value">Empoli (FI), Italia</div>
+    </div>
+    <a href="https://luxlab.it" target="_blank" class="contact-card">
+      <div class="label">Sito Aziendale</div>
+      <div class="value">luxlab.it</div>
+    </a>
+  </div>
 </div></section>
 
+<!-- FOOTER -->
 <footer><div class="c">
-<p>&copy; 2026 LUX LAB S.R.L. — NZ Project</p>
-<p class="lg">Tutti i diritti riservati. P.IVA 07308130488</p>
+  <p>&copy; 2026 LUX LAB S.R.L. &mdash; NZ Project</p>
+  <p class="sub">Tutti i diritti riservati. Proprieta intellettuale protetta. P.IVA 07308130488</p>
 </div></footer>
+
 </body>
 </html>
